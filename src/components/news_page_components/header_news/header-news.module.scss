@@ -1,0 +1,63 @@
+@use '../../../app/_css/mixins' as mix;
+@use '../../../app/_css/responsive' as res;
+
+.header {
+  width: 100svw;
+}
+
+.header__container {
+  justify-content: space-between;
+
+  @include res.container;
+}
+
+.header__logo-image {
+  width: clamp(100px, 17.7svw, 400px);
+  height: auto;
+}
+
+.header__data {
+  gap: clamp(5px, 5svw, 200px);
+}
+
+@media (min-width: 568px) {
+  .header__data {
+    gap: clamp(5px, 7.5svw, 200px);
+  }
+}
+
+@media (min-width: 1200px) {
+  .header__data {
+    gap: clamp(5px, 10svw, 200px);
+  }
+}
+
+.header__icons {
+  gap: 10px;
+}
+
+.header__nav-list {
+  gap: clamp(5px, 3.4svw, 75px);
+  @include mix.fontSetSize;
+}
+
+@media (max-width: 424px) {
+  .header__nav-list {
+    padding-top: 16px;
+    gap: clamp(5px, 2.4svw, 75px);
+  }
+  .header__icons {
+    gap: 3px;
+  }
+  .header__data {
+    gap: clamp(5px, 3svw, 200px);
+  }
+  .header__logo-image {
+    width: clamp(90px, 17.7svw, 400px);
+    height: auto;
+  }
+}
+
+.header__icon--setSizes {
+  @include mix.iconSetSize;
+}

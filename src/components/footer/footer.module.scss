@@ -1,0 +1,104 @@
+@use '../../app/_css/responsive' as res;
+@use '../../app/_css/mixins' as mix;
+@use '../../app/_css/variables' as var;
+
+.footer {
+  width: 100svw;
+  margin-top: clamp(50px, 7.5svw, 160px);
+}
+
+.footer__wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(240px, 350px));
+  gap: 0;
+  @include mix.fontSetSize(1.375);
+  @include res.container;
+
+  @media (min-width: var.$breakpoint-desktop) {
+    justify-content: space-between;
+    .footer__nav-columns {
+      justify-content: center;
+      align-items: center;
+    }
+    .footer__content {
+      max-width: 350px;
+    }
+  }
+
+  @media (max-width: var.$breakpoint-desktop) {
+    grid-template-columns: repeat(2, minmax(240px, 350px));
+    column-gap: 50px;
+
+    .footer__content {
+      align-items: left;
+      width: 100%;
+    }
+
+    .footer__nav-columns {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footer__content {
+      text-align: center;
+    }
+
+    .footer__nav-columns:nth-child(1) {
+      justify-content: center;
+    }
+  }
+
+  /* Для мобилок — концепт */
+
+  @media (max-width: var.$breakpoint-mobile) {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: repeat(1, minmax(240px, 1fr));
+
+    .footer__nav-columns {
+      justify-content: center;
+      align-items: center;
+      padding: clamp(10px, 2svw, 40px) 0;
+    }
+
+    .footer__content {
+      text-align: center;
+    }
+  }
+}
+
+.footer__headers {
+  text-transform: uppercase;
+  font-weight: 900;
+  @include mix.fontSetSize(1.5);
+}
+
+.footer__wrapper__image--logo {
+  justify-self: center;
+  width: 17svw;
+  min-width: 100px;
+  height: auto;
+}
+
+.footer__nav-columns {
+  padding: clamp(20px, 2svw, 80px) 0;
+  position: relative;
+  display: grid;
+  min-width: 240px;
+  width: 100%;
+  height: auto;
+}
+
+.footer__content {
+  text-align: left;
+  height: 100%;
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(5px, calc((10 / 1080) * 1svh), 20px);
+}
+
+.footer__content--hover {
+  border-bottom: 1px;
+  border-color: #fafafa;
+}

@@ -1,0 +1,10 @@
+@use '../../../../app/_css/mixins' as mix;
+
+.news-item {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(10px, 2.3svh, 25px);
+}
+.news-item__text {
+  @include mix.fontSetSize(1.25);
+}

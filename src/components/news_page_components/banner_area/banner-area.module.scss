@@ -1,0 +1,68 @@
+@use '../../../app/_css/variables' as var;
+@use '../../../app/_css/responsive' as res;
+@use '../../../app/_css/mixins' as mix;
+
+hr {
+  border: none;
+  width: 100svw;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--accent-red));
+}
+
+.banner {
+  width: 100svw;
+}
+
+.banner__wrapper {
+  @include mix.fontSetSize(1.5);
+  @include res.container;
+}
+
+.banner__wrapper--position {
+  margin-top: clamp(20px, 5svh, 200px);
+}
+
+@media (max-width: var.$breakpoint-mobile) {
+  .banner__wrapper--position {
+    margin-top: clamp(20px, 2.5svh, 200px);
+  }
+}
+
+.banner__area {
+  gap: 2.6svw;
+
+  .banner__area__text {
+    gap: 10px;
+
+    h2 {
+      line-height: 1.25;
+      @include mix.fontSetSize(1.5);
+    }
+
+    p {
+      @include mix.fontSetSize;
+    }
+  }
+}
+
+.banner__area__image {
+  width: 40svw;
+  height: auto;
+  background-color: green;
+}
+
+@media (max-width: var.$breakpoint-mobile-small) {
+  .banner__area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .banner__area__image {
+      width: 80svw;
+    }
+
+    .banner__area__text {
+      gap: 0px;
+    }
+  }
+}

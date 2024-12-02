@@ -1,0 +1,45 @@
+@use './variables' as var;
+
+/* Миксин для иконок в news */
+@mixin iconSetSize {
+  min-width: 16px;
+  width: 16px;
+  height: 16px;
+
+  /* Планшеты */
+  @media (min-width: var.$breakpoint-tablet) {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Десктопы */
+  @media (min-width: var.$breakpoint-desktop) {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Широкие экраны */
+  @media (min-width: var.$breakpoint-large) {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* Миксин для шрифта */
+@mixin fontSetSize($scale: 1) {
+  font-size: 0.6rem * $scale;
+
+  @media (max-width: 424px) {
+    font-size: 0.5rem * $scale;
+  }
+
+  /* Десктопы & Планшеты */
+  @media (min-width: var.$breakpoint-tablet) {
+    font-size: 0.8rem * $scale;
+  }
+
+  /* Планшеты */
+  @media (min-width: var.$breakpoint-large) {
+    font-size: 1rem * $scale;
+  }
+}

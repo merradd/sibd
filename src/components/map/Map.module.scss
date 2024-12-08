@@ -1,0 +1,15 @@
+.map_container {
+    display: flex; 
+    justify-content: start;
+    // padding: 20px;
+    box-sizing: border-box; 
+    
+}
+
+.Map {
+    width: 100%;
+    max-width: 1000px; 
+    height: auto; 
+    aspect-ratio: 16 / 9; 
+
+}

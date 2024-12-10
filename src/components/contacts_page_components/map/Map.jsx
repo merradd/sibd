@@ -6,16 +6,16 @@ import './Map.module.scss'
 
 const MyMap = () => {
     const mapState = {
-        center: [53.893979, 27.547030], 
-        zoom: 16,
+        center: [53.893567, 27.545599], 
+        zoom: 17,
     };
 
     return (
         <YMaps>
             <div className='map_container' >
-                <Map state={mapState} className='Map'>
+                <Map state={mapState} className='Map' modules={['geoObject.addon.balloon']}>
                     <Placemark
-                        geometry={[53.893979, 27.547030]} 
+                        geometry={[53.893567, 27.545599]} 
                         properties={{
                             balloonContent: 'БГУ',
                         }}

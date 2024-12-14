@@ -1,0 +1,29 @@
+@use '../../app/_css/responsive' as res;
+
+.header {
+  padding-top: clamp(20px, 2svw, 36px);
+  padding-bottom: clamp(8px, 1svw, 24px);
+
+  height: clamp(200px, 35svh, 35svh);
+}
+
+.header__wrapper {
+  padding-bottom: 0;
+  @include res.container;
+}
+
+@media (min-width: 1024px) {
+  .header {
+    height: clamp(300px, 50svh, 50svh);
+  }
+}
+
+.header__headline {
+  display: flex;
+  align-items: end;
+  font-size: clamp(
+    28px,
+    calc(36px + (75 - 36) * ((100vw - 768px) / (1920 - 768))),
+    75px
+  );
+}

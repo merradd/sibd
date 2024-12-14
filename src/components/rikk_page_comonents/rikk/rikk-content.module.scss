@@ -1,0 +1,27 @@
+.rikk-container {
+    margin: 550px 150px 100px;
+}
+
+.subtitle-container {
+    margin-top: 60px;
+    max-width: 960px;
+    font-size: 24px;
+
+    p {
+        padding-top: 15px;
+    }
+}
+
+.benefits {
+    margin: 60px 0 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:60px 150px ;
+    font-size: 20px;
+
+    &-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+}

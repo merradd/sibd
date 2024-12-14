@@ -1,0 +1,26 @@
+.page-header {
+  position: absolute;
+  top: 0;
+  display: flex;
+  background: url('@/../../../../../public/rikk_images/rikk_title_image.png');
+  min-height:  450px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+   .title_text-content {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    top: 330px;
+    left: 150px;
+    right: 150px;
+    color: var(--white-bg);
+   }
+
+   h1 {
+    font-size: 75px;
+    line-height: 0.8;
+   }

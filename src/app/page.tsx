@@ -5,6 +5,7 @@ export default function Home() {
     <section className="page w-full">
       <Link href={'/news'}>To news</Link>
       <Link href={'/institute'}>To institute</Link>
+      <Link href={'/dalian'}>To dalian</Link>
     </section>
   );
 }

@@ -1,0 +1,7 @@
+@use '../../../app/_css/responsive' as res;
+.about-dpu {
+}
+
+.about-dpu__wrapper {
+  @include res.container;
+}

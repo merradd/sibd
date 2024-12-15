@@ -1,0 +1,71 @@
+@use '../../../app/_css/responsive' as res;
+
+.history-dpu__wrapper {
+  @include res.container;
+}
+
+.history-dpu__inner {
+  gap: clamp(16px, calc(8px + 7.35vw), 150px);
+
+  display: flex;
+}
+
+.inner-img-of-rock {
+  width: 38.28vw;
+  height: auto;
+  object-fit: cover;
+  min-width: 300px;
+  min-height: 400px;
+}
+.history-dpu__inner-text {
+  width: 50%;
+}
+
+.history-dpu__paragraph {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.history-dpu__date__inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.history-dpu__date__inner-num {
+  font-size: clamp(36px, calc(4px + 3.95vw), 80px);
+  margin-bottom: -10px;
+}
+.history-dpu__dates {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+@media (max-width: 1200px) {
+  .history-dpu__inner {
+    flex-direction: column;
+    gap: clamp(16px, calc(8px + 2.35vw), 150px);
+  }
+  .history-dpu__inner-text {
+    margin-top: 20px;
+  }
+  .history-dpu__inner-text {
+    width: 65%;
+  }
+  .inner-img-of-rock {
+    width: 50%;
+    height: auto;
+    min-width: 200px;
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .inner-img-of-rock {
+    width: 100%;
+    height: auto;
+  }
+  .history-dpu__inner-text {
+    width: 100%;
+  }
+}

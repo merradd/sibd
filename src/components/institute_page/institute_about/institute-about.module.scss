@@ -1,0 +1,49 @@
+@use '../../../app/_css/mixins' as mix;
+@use '../../../app/_css/variables' as var;
+@use '../../../app/_css/responsive' as res;
+
+.about-container {
+    @include res.container;
+    @include mix.fontSetSize(1);
+
+    .about-title {
+        @include mix.fontSetSize(1.5);
+    }
+}
+
+.about-item {
+    max-width: 60svw;
+    
+    @media (max-width: var.$breakpoint-mobile-small) {
+        max-width: 80svw;
+    }
+}
+
+.about-text-item {
+    max-width: 60svw;
+    margin-top: 75px;
+
+    p {
+        padding: 15px 0;
+    }
+
+    @media (max-width: var.$breakpoint-mobile-small) {
+        max-width: 100svw;
+        margin-top: 40px;
+
+        p {
+            padding: 5px 0;
+        }
+    }
+}
+
+@media (max-width: var.$breakpoint-mobile-small) {
+    .about-text-item {
+        margin-top: 25px;
+        width: 100%;
+    }
+}
+
+.text-line {
+    width: 150px;
+}

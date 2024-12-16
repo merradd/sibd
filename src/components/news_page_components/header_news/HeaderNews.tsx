@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import './header-news.module.scss'
 import Logo from '../../../../public/logo.svg';
-import Image, { StaticImageData } from 'next/image';
+import Image/*, { StaticImageData } */ from 'next/image';
 
 import Image1 from '../../../../public/news_banner_images/students_performance.png';
 import Image2 from '../../../../public/news_banner_images/students_performance.png';
@@ -42,7 +42,10 @@ const HeaderNews = () => {
                         <ul className='header__nav-list flex pt-5'>
                             {newsNav.map((navItem: string, index: number) => (
                                 <li key={index} className='header__nav-item'>
-                                    <button className='text-white hover:text-accent hover:underline hover:underline-offset-4' onClick={() => handleBannerChange([Image1, Image2, Image3][index])}>
+                                    <button
+                                        className='text-white hover:text-accent hover:underline hover:underline-offset-4'
+                                        onClick={() => handleBannerChange([Image1, Image2, Image3][index])}
+                                    >
                                         {navItem}
                                     </button>
                                 </li>

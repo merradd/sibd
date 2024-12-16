@@ -43,7 +43,10 @@ const secondColumn = [
 const Footer = () => {
     return (
         <footer className='footer bg-primary w-full'>
-            <div className='footer__wrapper text-white text-nowrap'>
+            <div className='footer__wrapper text-white text-nowrap
+            my-[20px]
+            md:my-[30px]
+            lg:my-[50px]/'>
                 <div className='footer__wrapper__image footer__nav-columns'>
                     <div className='footer__content'>
                         <Image

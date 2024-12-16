@@ -1,0 +1,9 @@
+.main__container {
+    width: 100svw;
+    padding: 0 clamp(25px, 8vw, 75px);
+}
+
+.main__text_h1 {
+    font-size: 24px;
+    margin-top: 20px;
+}

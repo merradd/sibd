@@ -1,0 +1,65 @@
+@use '../../../app/_css/responsive' as res;
+
+.stats__wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
+  @include res.container;
+}
+
+@media (max-width: 1300px) {
+  .stats__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .stats__wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 30px;
+  }
+}
+
+.inner-text--bigNum_stats {
+  font-size: clamp(
+    36px,
+    calc(16px + (120 - 16) * ((100vw - 320px) / (1920 - 320))),
+    120px
+  );
+}
+
+.vertical-line {
+  display: block;
+  width: 3px;
+  height: 100%; /* Растягиваем на всю высоту контейнера */
+  background-color: #fafafa;
+}
+
+.counts {
+  gap: clamp(
+    10px,
+    calc(10px + (60 - 50) * ((100vw - 320px) / (1920 - 320))),
+    60px
+  );
+  row-gap: 0px;
+}
+
+.inner-text--bigNum_stats,
+.veryBIGBOX {
+  margin-bottom: -30px;
+}
+
+@media (max-width: 1200px) {
+  .inner-text--bigNum_stats,
+  .veryBIGBOX {
+    margin-bottom: -20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .inner-text--bigNum_stats,
+  .veryBIGBOX {
+    margin-bottom: -10px;
+  }
+}

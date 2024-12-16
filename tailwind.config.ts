@@ -13,7 +13,7 @@ export default {
         primary: "var(--primary-blue)",
         accent: "var(--accent-red)",
         gray: "var(--gray)",
-      },
+      }, 
     },
   },
   plugins: [],
